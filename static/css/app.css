@@ -1,0 +1,6 @@
+.skip-btn:hover{
+    color: black !important;
+}
+.skip-btn:active {
+    color: gray !important;
+}

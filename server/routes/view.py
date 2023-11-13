@@ -4,7 +4,7 @@ view = Blueprint('view', __name__)
 
 @view.route('/')
 def index():
-    return render_template('app.html')
+    return render_template('view/home.html')
 
 @view.route('/login')
 def login():
