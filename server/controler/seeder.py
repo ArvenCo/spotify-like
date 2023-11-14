@@ -1,7 +1,4 @@
-import os
-from mutagen.id3 import ID3
-from mutagen.mp3 import MP3
-from datetime import timedelta
+from imports import *
 from server.models import *
 
 def convert_delta(dlt: timedelta) -> str:
@@ -11,10 +8,10 @@ def convert_delta(dlt: timedelta) -> str:
 def to_db(dir: str, filename: str):
     data = ID3(dir)
     mp3 = MP3(dir)
+
+    title, artist, album = filename, None, None
     duration = convert_delta(timedelta(seconds=mp3.info.length))
     
-    title, artist, album = filename, None, None
-
     if data.getall('TIT2'):
         title = str(data['TIT2'])
     
