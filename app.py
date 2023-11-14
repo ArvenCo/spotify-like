@@ -14,6 +14,8 @@ db.init_app(app)
 
 
 def main():
+    with app.app_context():
+        db.create_all()
     return app.run(debug=True, host='0.0.0.0', port=1039)
 
 if __name__ == '__main__':

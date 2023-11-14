@@ -1,4 +1,5 @@
 from imports import *
+from server.controler.seeder import main
 
 view = Blueprint('view', __name__)
 
@@ -13,3 +14,9 @@ def login():
 @view.route('/signup')
 def signup():
     return render_template('auth/signup.html')
+
+@view.route('/seed')
+def seed():
+    main()
+    return 'done'
+    

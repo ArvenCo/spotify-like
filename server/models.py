@@ -15,7 +15,7 @@ class Music(db.Model):
     album_id = db.Column(db.Integer, db.ForeignKey('albums.id'), nullable=True)
     path = db.Column(db.String, nullable=False)
     title = db.Column(db.String, nullable=False, unique=True)
-    duration = db.Column(db.Float, nullable=False)
+    duration = db.Column(db.String, nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.now())
 
 class Artist(db.Model):
