@@ -1,6 +1,5 @@
 from imports import *
-from server.controler.seeder import main
-
+from server.controller.seeder import main
 view = Blueprint('view', __name__)
 
 @view.route('/')
