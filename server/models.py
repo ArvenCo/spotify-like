@@ -22,11 +22,14 @@ class Artist(db.Model):
     __tablename__ = 'artists'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, nullable=False)
+    albums = db.relationship('Album', backref='artists', lazy=True)
 
 class Album(db.Model):
     __tablename__ = 'albums'
     id = db.Column(db.Integer, primary_key=True)
     artist_id = db.Column(db.Integer, db.ForeignKey('artists.id'), nullable=False)
     name = db.Column(db.String, nullable=False)
+    musics = db.relationship('Music', backref='albums', lazy=True)
+
 
     
