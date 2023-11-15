@@ -70,7 +70,7 @@
             </div>
             <div class="col-4 px-5">
                 <div class="d-flex justify-content-end">
-                    <a href="" class="nav-link text-secondary border-none rounded-circle px-3 py-2 mx-1 skip-btn">
+                    <a id="download" href="" class="nav-link text-secondary border-none rounded-circle px-3 py-2 mx-1 skip-btn" download>
                         <i class="bi bi-download"></i>
                     </a>
                 </div>
@@ -91,11 +91,13 @@
             document.getElementById('title').innerText= title;
             document.getElementById('artist').innerText = artist;
             document.getElementById('album').innerText = album;
-            
-            
-            
+            document.getElementById('download').href = 'static/mp3/' + path;
         }
 
+        function download(){
+            let audio = document.getElementById('audio');
+            audio.download
+        }
         function toogle_play(){
             let audio = document.getElementById('audio');
             if (audio.paused){
