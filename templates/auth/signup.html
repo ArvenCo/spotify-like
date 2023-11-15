@@ -6,7 +6,7 @@
         Signup
     </div>
     <div class="card-body my-5">
-        <form action="#" method="post">
+        <form action="{{ url_for('auth.signup') }}" method="post">
             <div class="mb-3">
                 <input type="text" name="username" id="username" placeholder="Username" class="form-control">
             </div>
@@ -14,7 +14,7 @@
                 <input type="password" name="password" id="password" placeholder="Password" class="form-control">
             </div>
             <div class="mb-3">
-                <input type="password" name="verified_password" id="verified_password" placeholder="Verified Password" class="form-control">
+                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" class="form-control">
             </div>
             <div class="d-flex justify-content-center">
                 <button type="submit" class="btn btn-primary w-75">

@@ -92,6 +92,8 @@
             document.getElementById('artist').innerText = artist;
             document.getElementById('album').innerText = album;
             document.getElementById('download').href = 'static/mp3/' + path;
+
+            document.title = title + ' - ' + artist;
         }
 
         function download(){
@@ -105,6 +107,7 @@
             }else{
                 audio.pause();
             }
+        
         }
 
         

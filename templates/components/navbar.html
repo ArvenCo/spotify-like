@@ -6,8 +6,13 @@
             </a>
 
             <div class="ms-auto d-flex ">
+                {% if current_user.is_authenticated %}
+                <p class="fs-6 fw-small me-4">{{ current_user.username }}</p> |
+                <a href="{{ url_for('auth.logout')}}" class="ms-4 nav-link">Logout</a>
+                {% else %}
                 <a href="{{ url_for('view.login') }}" class="nav-link me-3">Login</a>
                 <a href="{{ url_for('view.signup') }}" class="nav-link me-3">Signup</a>
+                {% endif %}
             </div>
            
         </div>
