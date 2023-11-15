@@ -66,7 +66,7 @@ def files_in(str_dir: str):
             filepath = os.path.join(str_dir, filename)
             id3 = to_db(filepath, filename)
             
-            save(id3, filepath)
+            save(id3, filename)
             # database save
             
         else:

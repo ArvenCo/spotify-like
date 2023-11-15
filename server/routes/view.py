@@ -7,8 +7,7 @@ view = Blueprint('view', __name__)
 
 @view.route('/')
 def index():
-    print(MP3Controller.index())
-    return render_template('view/home.html')
+    return render_template('view/home.html', data=MP3Controller.index())
 
 @view.route('/login')
 def login():
@@ -22,4 +21,6 @@ def signup():
 def seed():
     main()
     return 'done'
+
+
     
